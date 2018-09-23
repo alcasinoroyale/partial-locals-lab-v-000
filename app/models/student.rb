@@ -18,5 +18,5 @@ class Student < ActiveRecord::Base
     if student.present?
       self.where('name LIKE ?', "%#{student}%")
     else
-      self.where('name LIKE ?')
+      self.all
 end
